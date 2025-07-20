@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VerdeMaiz Agro | Comercialização de Commodities</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="imagens/imagem verdeMaiz agro.jpg" alt="Logo VerdeMaiz Agro - empresa de comercialização de commodities agrícolas" class="h-28 w-auto">
+            </div>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-8">
+                    <li><a href="#home" class="text-green-700 font-medium hover:text-green-600">Início</a></li>
+                    <li><a href="#services" class="text-gray-600 hover:text-green-700">Commodities</a></li>
+                    <li><a href="#about" class="text-gray-600 hover:text-green-700">Sobre nós</a></li>
+                    <li><a href="#services-extra" class="text-gray-600 hover:text-green-700">Serviços</a></li>
+                    <li><a href="#contact" class="text-gray-600 hover:text-green-700">Contato</a></li>
+                </ul>
+            </nav>
+            <button class="md:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient py-20 md:py-32">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+                    Conexões Globais no Mercado de Commodities
+                </h1>
+                <p class="text-lg text-gray-600 mb-8">
+                    Soluções integradas para comercialização de commodities agrícolas como soja, milho, arroz e sorgo.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#contact" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-md font-medium transition duration-300">
+                        Fale conosco
+                    </a>
+                    <a href="#services" class="border border-green-600 text-green-600 hover:bg-green-50 px-6 py-3 rounded-md font-medium transition duration-300">
+                        Nossas Commodities
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2">
+                <img src="https://imagens-cdn.canalrural.com.br/2019/01/lavoura-brasil-1024x768.jpg" alt="Campo de commodities agrícolas - VerdeMaiz Agro" class="rounded-lg shadow-xl">
+            </div>
+        </div>
+    </section>
+
+    <!-- Commodities Section -->
+    <section id="services" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Nossas Commodities</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Somos especializados na comercialização de commodities agricolas, nosso compromisso é proporcionar transparência, eficiência e segurança em nossas negociações. Estamos localizados em Palmas - TO e atuamos estrategicamente na região do MATOPIBAPA — Maranhão, Tocantins, Piauí, Bahia e Pará 
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Commodity 1 -->
+                <div class="commodity-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="imagens/campo-de-vista-frontal-com-paisagem-de-plantas.jpg" alt="Plantação de soja - VerdeMaiz Agro" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Soja</h3>
+                        <p class="text-gray-600 mb-4">
+                            Negociação de soja em grão e derivados com contratos futuros e spot, para atender mercado interno e também para exportação.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-green-600 font-medium">Mercado Ativo</span>
+                            <button class="text-green-600 hover:text-green-700 font-medium" onclick="openCommodityModal('soja')">Detalhes →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Commodity 2 -->
+                <div class="commodity-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="imagens/campo-de-arroz-sob-luz-sol.jpg" alt="Arroz em grão - VerdeMaiz Agro" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Arroz</h3>
+                        <p class="text-gray-600 mb-4">
+                            Comercialização de arroz de alta qualidade, fornecendo produto para o mercado interno e também para exportação
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-green-600 font-medium">Mercado Ativo</span>
+                            <button class="text-green-600 hover:text-green-700 font-medium" onclick="openCommodityModal('arroz')">Detalhes →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Commodity 3 -->
+                <div class="commodity-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://cdn.pixabay.com/photo/2019/09/27/00/15/corn-on-the-cob-4507230_1280.jpg" alt="Milho colhido - VerdeMaiz Agro" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Milho</h3>
+                        <p class="text-gray-600 mb-4">
+                            Intermediação de negócios com milho de alta qualidade para o mercado nacional.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-green-600 font-medium">Mercado Ativo</span>
+                            <button class="text-green-600 hover:text-green-700 font-medium" onclick="openCommodityModal('milho')">Detalhes →</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <img src="imagens/imagem verdeMaiz agro.jpg" alt="Logo VerdeMaiz Agro - empresa de comercialização de commodities agrícolas" class="rounded-lg shadow-lg">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Sobre a VerdeMaiz Agro</h2>
+                    <p class="text-gray-600 mb-4">
+                       A VerdeMaiz Agro nasceu com o propósito de conectar produtores rurais aos melhores canais de comercialização e crédito do agronegócio brasileiro. Especializada na compra e venda de soja, milho, arroz, sorgo e seus derivados, a empresa atua tanto no mercado interno quanto na exportação, oferecendo agilidade, segurança e transparência em todas as negociações.
+                    </p>
+                    <p class="text-gray-600 mb-4">
+                        Com uma equipe multidisciplinar e experiente, unimos conhecimento em logística, análise de mercado, gestão de risco e soluções financeiras. Nosso foco é transformar a comercialização de grãos por meio de conexões inteligentes e estratégias, garantindo mais rentabilidade e eficiência para nossos clientes em cada operação.
+                    </p>
+                    <!-- Destaques removidos conforme solicitado -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services-extra" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Nossos Serviços</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Oferecemos soluções completas para o agronegócio: Comercialização, Transporte e Assessoria Financeira.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Serviço 1: Comercialização -->
+                <div class="bg-green-50 rounded-lg shadow-md p-8 flex flex-col items-center text-center hover:shadow-lg transition">
+                    <div class="mb-4">
+                        <svg class="w-12 h-12 mx-auto" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect x="8" y="16" width="32" height="20" rx="4" fill="#E8F5E9" stroke="#4CAF50" stroke-width="2.5"/>
+                          <path d="M16 16v-2a8 8 0 0 1 16 0v2" stroke="#388E3C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                          <rect x="8" y="16" width="32" height="20" rx="4" stroke="#388E3C" stroke-width="1.5" fill="none"/>
+                          <circle cx="24" cy="26" r="2.5" fill="#4CAF50"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Comercialização</h3>
+                    <p class="text-gray-600">Negociação eficiente de grãos e commodities, conectando produtores aos melhores mercados nacionais e internacionais.</p>
+                </div>
+                <!-- Serviço 2: Transporte -->
+                <div class="bg-green-50 rounded-lg shadow-md p-8 flex flex-col items-center text-center hover:shadow-lg transition">
+                    <div class="mb-4">
+                        <svg class="w-12 h-12 text-green-600 mx-auto" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                          <rect x="3" y="13" width="13" height="5" rx="2" fill="#4CAF50" stroke="#388E3C" stroke-width="1.5"/>
+                          <rect x="16" y="15" width="5" height="3" rx="1" fill="#81C784" stroke="#388E3C" stroke-width="1.5"/>
+                          <circle cx="7.5" cy="20" r="1.5" fill="#388E3C"/>
+                          <circle cx="18.5" cy="20" r="1.5" fill="#388E3C"/>
+                          <path d="M3 13V9a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v4" stroke="#388E3C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M21 18v-2a2 2 0 0 0-2-2h-3" stroke="#388E3C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Transporte</h3>
+                    <p class="text-gray-600">Logística integrada para garantir o transporte seguro e ágil dos produtos até o destino final.</p>
+                </div>
+                <!-- Serviço 3: Assessoria Financeira -->
+                <div class="bg-green-50 rounded-lg shadow-md p-8 flex flex-col items-center text-center hover:shadow-lg transition">
+                    <div class="mb-4">
+                        <svg class="w-12 h-12 text-green-600 mx-auto" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3-1.343-3-3-3zm0 0V4m0 12v4m8-8h-4m-8 0H4"/></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Assessoria Financeira</h3>
+                    <p class="text-gray-600">Consultoria especializada para facilitar crédito, gestão de risco e soluções financeiras para o agronegócio.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Entre em Contato</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">
+                        Nossa equipe está pronta para ajudar você no mercado de commodities.
+                    </p>
+                </div>
+                
+<form id="contact-form" action="https://formsubmit.co/valder.panta1@gmail.com" method="POST" class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Nome</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:border-green-500 focus:ring focus:ring-green-200">
+                        </div>
+                        <div>
+                            <label for="company" class="block text-gray-700 font-medium mb-2">Empresa</label>
+                            <input type="text" id="company" name="company" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:border-green-500 focus:ring focus:ring-green-200">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 font-medium mb-2">E-mail</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:border-green-500 focus:ring focus:ring-green-200">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-gray-700 font-medium mb-2">Telefone</label>
+                            <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:border-green-500 focus:ring focus:ring-green-200">
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <label for="commodity" class="block text-gray-700 font-medium mb-2">Commodity de Interesse</label>
+                        <select id="commodity" name="commodity" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:border-green-500 focus:ring focus:ring-green-200">
+                            <option value="">Selecione...</option>
+                            <option value="soja">Soja</option>
+                            <option value="milho">Milho</option>
+                            <option value="Arroz">Arroz</option>
+                            <option value="algodao">Algodão</option>
+                            <option value="outros">Outros</option>
+                        </select>
+                    </div>
+                    <div class="mb-6">
+                        <label for="message" class="block text-gray-700 font-medium mb-2">Mensagem</label>
+                        <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:border-green-500 focus:ring focus:ring-green-200"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-4 rounded-md transition duration-300">
+                        Enviar Mensagem
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <img src="imagens/imagem verdeMaiz agro.jpg" alt="Logo VerdeMaiz Agro - empresa de comercialização de commodities agrícolas" class="h-12 mb-4">
+                    <p class="text-gray-300 text-sm">
+                        Conectando produtores aos mercados globais com excelência e transparência.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">Links Rápidos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-300 hover:text-green-400 transition">Início</a></li>
+                        <li><a href="#services" class="text-gray-300 hover:text-green-400 transition">Commodities</a></li>
+                        <li><a href="#about" class="text-gray-300 hover:text-green-400 transition">Sobre nós</a></li>
+                        <li><a href="#services-extra" class="text-gray-300 hover:text-green-400 transition">Serviços</a></li>
+                        <li><a href="#contact" class="text-gray-300 hover:text-green-400 transition">Contato</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">Contato</h3>
+                    <address class="not-italic text-gray-300 text-sm">
+                        <p class="mb-2">Phone: (65) 99809-0695</p>
+                        <p class="mb-2">Email: valder.panta1@gmail.com</p>
+                        <p class="mb-2">Instagram: @verdemaizagro</p>
+                    </address>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">Redes Sociais</h3>
+                    <p class="text-gray-300 text-xs mb-2">Ao clicar, você será automaticamente direcionado.</p>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="https://www.linkedin.com/in/valder-panta" target="_blank" rel="noopener" class="bg-gray-700 hover:bg-gray-600 w-8 h-8 rounded-full flex items-center justify-center">
+                            <span class="sr-only">LinkedIn</span>
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                        <a href="https://instagram.com/verdemaizagro" target="_blank" rel="noopener" class="bg-gray-700 hover:bg-gray-600 w-8 h-8 rounded-full flex items-center justify-center">
+                            <span class="sr-only">Instagram</span>
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5zm4.25 3.25a5.25 5.25 0 1 1 0 10.5a5.25 5.25 0 0 1 0-10.5zm0 1.5a3.75 3.75 0 1 0 0 7.5a3.75 3.75 0 0 0 0-7.5zm5.25 1.25a1 1 0 1 1-2 0a1 1 0 0 1 2 0z"/>
+                            </svg>
+                        </a>
+                        <a href="https://l.instagram.com/?u=https%3A%2F%2Fwa.me%2F5565998090695%3Ffbclid%3DPAZXh0bgNhZW0CMTEAAack_Tr-89piIEvMEblhzrlpZbD9vNPQoWMgxPNiZf3B7Fo8FhqrXX-jTxjdEA_aem_02rTaGTOS_tLn2nHlwRuTA&e=AT1eyP-TmyOLiulsv98upIZYl9NJuK-HAzXPL8uni30_HoAoTNnQHzcABIDph_dlQs-btmQ6wMaY5E3eCD3QFnTKFCuV2aZNyXujfiY5IJpMXlqGTiiOyUg" target="_blank" rel="noopener" class="bg-gray-700 hover:bg-gray-600 w-8 h-8 rounded-full flex items-center justify-center">
+                            <span class="sr-only">WhatsApp</span>
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.031-.967-.273-.099-.472-.148-.67.15-.198.297-.767.967-.94 1.164-.173.198-.347.223-.644.075-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.372-.01-.571-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.099 3.2 5.077 4.363.71.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.288.173-1.413-.074-.124-.272-.198-.57-.347zm-5.421 6.318h-.001a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.999-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.455 4.436-9.89 9.892-9.89 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.902 6.991c-.003 5.456-4.438 9.891-9.893 9.891zm8.413-18.304A11.815 11.815 0 0 0 12.05 0C5.495 0 .06 5.435.058 12.09c0 2.137.56 4.223 1.623 6.067L0 24l6.064-1.589a11.89 11.89 0 0 0 5.983 1.527h.005c6.554 0 11.89-5.435 11.893-12.09a11.82 11.82 0 0 0-3.49-8.652z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400 text-sm">
+                <p>© 2025 VerdeMaiz Agro Commodities. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal de detalhes das commodities -->
+    <div id="commodity-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-lg shadow-xl max-w-lg w-full p-8 relative">
+            <button onclick="closeCommodityModal()" class="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl">&times;</button>
+            <div id="commodity-modal-content"></div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
+
