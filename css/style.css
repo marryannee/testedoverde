@@ -1,0 +1,19 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+}
+.hero-gradient {
+    background: linear-gradient(135deg, #f7f7f7 0%, #e8f5e9 100%);
+}
+.commodity-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+#contact-form input, #contact-form textarea {
+    transition: all 0.3s ease;
+}
+#contact-form input:focus, #contact-form textarea:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}
